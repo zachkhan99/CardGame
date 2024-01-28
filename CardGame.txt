@@ -1,0 +1,77 @@
+GOAL:   The goal of this program is to create a basic card game framework
+        where it keeps track of card locations for as many hands as needed
+
+INPUT: No input is required from the user
+
+OUTPUT: Displays the location of all cards including:
+            assigned card number, card name, and
+            location of the card.
+        Displays the player's (user) hand (5 cards)
+        Displays the computer's hand (5 cards)
+
+1) add in the random module to obtain a random integer later
+2) assign the number 52 to variable name 'NUMCARDS'
+3) assign the number 0 to variable name 'DECK'
+4) assign the number 1 to variable name 'PLAYER'
+5) assign the number 2 to variable name 'COMP'
+6) the variabale name 'cardLoc' gets assigned an array of 0 repeated the number of times NUMCARDS represents
+7) assign an list to variable name 'suitName'
+8) assign another list to variable name 'rankName'
+9) assign another list to variable name 'playerName'
+10) define function main():
+
+    a) defining clearDeck() function:
+        INPUT: N/A
+        OUTPUT: N/A
+
+        STEPS:  1) set up a for loop where i is the temporary variable
+                2) i gets iterated the number value of NUMCARDS (52) times
+                3) these iterated numbers get stored in variable DECK
+
+    c)
+
+    b) defining showDeck() function:
+        INPUT: N/A
+        OUTPUT: List of all cards
+                Card number
+                Card name
+                Card location
+
+        STEPS:  1) print the header and columns names to the user
+                    (card number, name, location)
+                2) assign 0 to variable named 'card'
+                3) set up a for loop where the
+                    a) variable name 'rank' is assigned the modulus remainder value of the card divided by 13
+                    b) variable name 'suit' is assigned the integer value of the card number divided by 13
+                    c) variable 'card' gets 1 added to it
+                    d) prints out the correct card information as a list
+                        1) card displays the number
+                        2) rankName[rank] is the name of the card's rank based on the positional value of variabale 'rank'
+                        3) suitName[suit] is the name of the card's suit based on the positional value of variabale 'suit'
+                        4) playerName[location] is where the card is located once the cards are assigned
+
+    c) defining assignCard() function:
+        INPUT: N/A
+        OUTPUT: N/A
+
+        STEPS:  1) set up a while loop where deal is set to true
+                2) when true, deal will perform the loop until condition is false
+                3) assign variable 'card' a random integer between 0 and 51
+                4) if the card position from the array cardLoc compares to the position of DECK then:
+                    a) that card position in the array will be assigned to the variable 'player'
+                    b) deal will then be equal to false which will stop the loop
+
+    d) defining showHand() function:
+        INPUT: N/A
+        OUTPUT: displays 2 hands to the user consisting of 5 random cards:
+                    hand 1 is the player's
+                    hand 2 is the computer's
+
+        STEPS:  1) print the header "displaying (player's or computer's) hand"
+                2)set up a for loop where variable 'card' is iterated between 0 and 51
+                    a) if the position of the card in the array cardLoc compares to the position int he variable player then:
+                        1) variable name 'rank' is assigned the modulus remainder value of the card divided by 13
+                        2) variable name 'suit' is assigned the integer value of the card number divided by 13
+                        3) prints the name of the card assigned to the player or computer
+
+11) run the main() function
