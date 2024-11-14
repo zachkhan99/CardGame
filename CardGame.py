@@ -1,4 +1,7 @@
 """ cardGame.py
+    Zach Khan
+    March 31, 2023
+    
     basic card game framework
     keeps track of card locations for as many hands as needed
 """
@@ -27,13 +30,13 @@ def main():
   showHand(PLAYER)
   showHand(COMP)
 
-#clears the deck
+# Clears the deck
 def clearDeck():
-    #puts the number of cards in the deck
+    # Puts the number of cards in the deck
     for i in range(NUMCARDS):
         cardLoc[i] == DECK
 
-#defines each card with a number, then displays the name and location of each card
+# Defines each card with a number, then displays the name and location of each card
 def showDeck():
     print("\nLocation of all cards \n#  Card                  Location")
     card = 0
@@ -43,7 +46,7 @@ def showDeck():
         card = card + 1
         print (f"{card}  {rankName[rank]} of {suitName[suit]} \t {playerName[location]}")
 
-#assigns cards randomly to the player and the computer
+# Assigns cards randomly to the player and the computer
 def assignCard(player):
     deal = True
     while deal:
@@ -52,7 +55,7 @@ def assignCard(player):
             cardLoc[card] = player
             deal = False
 
-#Displays the hands of the player and the computer
+# Displays the hands of the player and the computer
 def showHand(player):
     print ("\nDisplaying {} hand:" .format(playerName[player]))
     for card in range(0,51):
